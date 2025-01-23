@@ -9,8 +9,8 @@ dotenv_path = Path(__file__).resolve().parent.parent.parent / "streamlit.env"
 load_dotenv(dotenv_path)
 
 # API URLs (replace with your actual API endpoints)
-GET_ACCOUNTS_API_URL = os.getenv('API_BASE_URL') + '/get-accounts'
-ADD_TRANSACTION_API_URL = os.getenv('API_BASE_URL') + '/add-transaction'
+GET_ACCOUNTS_API_URL = os.getenv('API_BASE_URL') + '/homefinance'+ '/get-accounts'
+ADD_TRANSACTION_API_URL = os.getenv('API_BASE_URL') + '/homefinance'+ '/add-transaction'
 
 def main():
     st.title("Add New Transaction")

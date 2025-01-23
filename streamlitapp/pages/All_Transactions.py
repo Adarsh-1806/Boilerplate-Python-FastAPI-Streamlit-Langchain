@@ -11,10 +11,10 @@ dotenv_path = Path(__file__).resolve().parent.parent.parent / "streamlit.env"
 load_dotenv(dotenv_path)
 
 # API URLs (replace with your actual API endpoints)
-GET_TXNS_API_URL = os.getenv('API_BASE_URL') + '/get-transactions'
-UPDATE_TXN_API_URL = os.getenv('API_BASE_URL') + '/update-transaction'
-DELETE_TXN_API_URL = os.getenv('API_BASE_URL') + '/delete-transaction'
-GET_ACCOUNTS_API_URL = os.getenv('API_BASE_URL') + '/get-accounts'
+GET_TXNS_API_URL = os.getenv('API_BASE_URL') + '/homefinance'+ '/get-transactions'
+UPDATE_TXN_API_URL = os.getenv('API_BASE_URL') + '/homefinance'+ '/update-transaction'
+DELETE_TXN_API_URL = os.getenv('API_BASE_URL') + '/homefinance'+ '/delete-transaction'
+GET_ACCOUNTS_API_URL = os.getenv('API_BASE_URL') + '/homefinance'+ '/get-accounts'
 
 def main():
     st.title("View, Update, and Delete Transactions")

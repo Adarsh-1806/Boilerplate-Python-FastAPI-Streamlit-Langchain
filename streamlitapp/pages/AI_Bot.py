@@ -3,7 +3,10 @@ import requests
 import os
 import json
 from dotenv import load_dotenv
-load_dotenv()
+from pathlib import Path
+dotenv_path = Path(__file__).resolve().parent.parent.parent / "streamlit.env"
+
+load_dotenv(dotenv_path)
 
 # Streamlit UI
 st.set_page_config(page_title="AI-Bot", page_icon='🧠',layout="wide")

@@ -42,7 +42,7 @@ def main():
         return
 
     # Pagination logic
-    items_per_page = 5
+    items_per_page = 10
     total_pages = (len(txns_df) - 1) // items_per_page + 1
     start_idx = st.session_state.page_number * items_per_page
     end_idx = start_idx + items_per_page

@@ -12,12 +12,24 @@
 **This is a very good production level boilerplate as well developed with fastapi, streamlit and langchain**
 ## Getting Started
 To get started with the TransactionManagement app, follow these steps:
+
 1. Clone this repository to your local machine and change your current directory to TransactionManagement directory.
     ```
     git clone https://github.com/YatharthAndharia/Boilerplate-Python-FastAPI-Streamlit-Langchain.git
     cd Boilerplate-Python-FastAPI-Streamlit-Langchain
     ```
 ## Run on local machine
+
+### Prerequisite
+Make sure to have postgresql installed in your system and it should be active.
+```
+systemctl status postgresql
+```
+If status is not active you can start it using following command.
+```
+systemctl start postgresql
+```
+
 2. Create a virtual environment and activate it.
     ```
     python -m venv venv
@@ -27,11 +39,15 @@ To get started with the TransactionManagement app, follow these steps:
     ```
     pip install -r requirements.txt
     ```
-4. Start the backend server.
+4. create .env file in project root folder and add all required credentials. Refer .env.example
+    ```
+    touch .env
+    ```
+5. Start the backend server.
     ```
     uvicorn app.main:app --reload
     ```
-5. Run the frontend application.
+6. Run the frontend application.
     ```
     streamlit run streamlitapp/app.py
     ```

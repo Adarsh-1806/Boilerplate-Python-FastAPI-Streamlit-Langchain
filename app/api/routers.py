@@ -6,10 +6,11 @@ Routers:
 
 from fastapi import APIRouter
 
-from app.api.endpoints import healthcheck,accounts,transactions,ai
+from app.api.endpoints import healthcheck,accounts,transactions,ai,reports
 api_router = APIRouter()
 
+api_router.include_router(healthcheck.router, tags=["healthcheck"])
 api_router.include_router(accounts.router, tags=["accounts"])
 api_router.include_router(ai.router,tags=["ai"])
 api_router.include_router(transactions.router,tags=["transactions"])
-api_router.include_router(healthcheck.router, tags=["healthcheck"])
+api_router.include_router(reports.router,tags=["reports"])

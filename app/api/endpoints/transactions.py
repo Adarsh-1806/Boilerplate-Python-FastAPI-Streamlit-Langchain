@@ -10,7 +10,7 @@ load_dotenv()
 router = APIRouter()
 
 @router.post('/add-transaction')
-async def add_account(
+async def add_transaction(
     request:Request,
     request_params:AddTransactionRequest
 ):
@@ -56,7 +56,7 @@ async def add_account(
         )
     
 @router.get('/get-transactions')
-async def get_account():
+async def get_transactions():
     """
         API for getting all transactions
     """
@@ -81,7 +81,6 @@ async def get_account():
             """)
             result = db_conn.execute(sql)
             data=result.fetchall()
-            print(data)
             data=serialize_txn_data(data)
             return JSONResponse(
                 status_code=status.HTTP_200_OK,
@@ -97,7 +96,7 @@ async def get_account():
         )
 
 @router.put('/update-transaction')
-async def update_account(
+async def update_transaction(
     request:Request,
     request_params:UpdateTransactionRequest
 ):
@@ -131,7 +130,7 @@ async def update_account(
         )
     
 @router.delete('/delete-transaction')
-async def delete_account(
+async def delete_transaction(
     request:Request,
     request_params:DeleteTransactionRequest
 ):

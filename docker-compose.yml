@@ -51,7 +51,7 @@ services:
     depends_on:
       - backend
     environment:
-      API_BASE_URL: "http://backend:8000"
+      API_BASE_URL: "http://backend:8000/homefinance"
     ports:
       - "8501:8501"
     networks:

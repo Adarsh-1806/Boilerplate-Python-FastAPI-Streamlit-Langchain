@@ -16,7 +16,7 @@ st.title("🧠 AI-Bot")
 
 # Input box for the question
 question = st.text_input("**Enter your question:**", placeholder="E.g., Show all transactions with amounts greater than 1000")
-api_url=os.getenv('API_BASE_URL')+ '/homefinance'+ '/ai-bot'
+api_url=os.getenv('API_BASE_URL') + '/ai-bot'
 # Button to trigger API call
 if st.button("Submit"):
     if question.strip():

@@ -10,7 +10,6 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy the Streamlit code
 COPY streamlitapp /app
-
 # Expose the port Streamlit runs on
 EXPOSE 8501
 

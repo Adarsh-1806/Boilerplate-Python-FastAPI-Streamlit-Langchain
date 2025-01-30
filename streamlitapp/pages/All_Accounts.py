@@ -11,9 +11,9 @@ dotenv_path = Path(__file__).resolve().parent.parent.parent / "streamlit.env"
 load_dotenv(dotenv_path)
 
 # API URLs (replace with your actual API endpoints)
-GET_ACCOUNTS_API_URL = os.getenv('API_BASE_URL') + '/homefinance' + '/get-accounts'
-UPDATE_ACCOUNT_API_URL = os.getenv('API_BASE_URL') + '/homefinance' + '/update-account'
-DELETE_ACCOUNT_API_URL = os.getenv('API_BASE_URL') + '/homefinance' + '/delete-account'
+GET_ACCOUNTS_API_URL = os.getenv('API_BASE_URL') + '/get-accounts'
+UPDATE_ACCOUNT_API_URL = os.getenv('API_BASE_URL') + '/update-account'
+DELETE_ACCOUNT_API_URL = os.getenv('API_BASE_URL') + '/delete-account'
 
 def main():
     st.title("View, Update, and Delete Accounts")
